@@ -11,7 +11,7 @@ const names = ["Creator", "Alice", "Bob", "Carla"];
     await stdlib.newTestAccounts(1+N, startingBalance);
   // We're including this for automation, but it would be better if the NFT is
   // assumed to already exist, or if it this contract actually created it.
-  const theNFT = await stdlib.launchToken(accCreator, "beepboop", "NFT", { supply: 1 });
+  const theNFT = await stdlib.launchToken(accCreator, "ownify", "NFT", { supply: 1 });
 
   await Promise.all( [ accCreator, ...accBidders ].map(async (acc, i) => {
     acc.setDebugLabel(names[i]);
